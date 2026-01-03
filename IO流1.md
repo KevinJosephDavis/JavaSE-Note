@@ -41,8 +41,6 @@ public class iodemo {
 }
 ```
 
-
-
 流的理解：创建流对象，相当于在程序与文件之间建立了一条管道。close相当于切断管道
 
 几个需要注意的点：
@@ -135,8 +133,6 @@ void write(byte[] b, int off, int len); //一次写一个字节数组的部分�
     }
 ```
 
-
-
 我们看一下`FileOutputStream`的构造函数源码：
 
 ```java
@@ -215,8 +211,6 @@ golang
 1.一次读一个字节，读出来的是数据在ASCII上对应的数字
 
 2.读到文件末尾了，read方法返回-1
-
-
 
 如何读到后面的内容并看到字母本身？那就循环读取+类型强转：
 
@@ -302,8 +296,6 @@ golang
     }
 ```
 
-
-
 不难发现，上面的例子中`FileInputStream`一次只读写一个字节，速度太慢了。通过重载read方法可以实现一次读取一个字节数组数据：
 
 ```java
@@ -373,8 +365,6 @@ ed
         System.out.println(new String(bytes,0,len3));
 
         fis.close();
-
-
     }
 ```
 
